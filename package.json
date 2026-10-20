@@ -1,0 +1,39 @@
+{
+  "name": "trendmcp",
+  "version": "1.0.0",
+  "description": "MCP server that feeds Hacker News, arXiv and GitHub Trending to AI assistants",
+  "main": "dist/index.js",
+  "scripts": {
+    "build": "tsc",
+    "start": "node dist/index.js",
+    "dev": "tsc && node dist/index.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/jihoo12/trendmcp.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "Apache-2.0",
+  "type": "module",
+  "bugs": {
+    "url": "https://github.com/jihoo12/trendmcp/issues"
+  },
+  "homepage": "https://github.com/jihoo12/trendmcp#readme",
+  "dependencies": {
+    "@modelcontextprotocol/sdk": "^1.32.1",
+    "cheerio": "^1.2.0",
+    "fast-xml-parser": "^5.11.2",
+    "zod": "^4.6.7"
+  },
+  "devDependencies": {
+    "@types/node": "^26.6.5",
+    "typescript": "^7.0.2"
+  },
+  "bin": {
+    "trendmcp": "dist/index.js"
+  },
+  "engines": {
+    "node": ">=18"
+  }
+}
