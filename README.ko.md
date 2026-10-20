@@ -16,19 +16,14 @@ API 키가 필요 없고, 모든 결과를 토큰 효율적인 Markdown으로 �
 | `github_trending` | GitHub Trending (언어, daily/weekly/monthly) |
 | `tech_trends_digest` | 위 세 소스를 한 번에 모은 오늘의 트렌드 요약 |
 
-## 설치
+## 사용법
 
-```bash
-npm install
-npm run build
-```
-
-## 연결
+Node.js 20.18.1 이상이 필요합니다. `npx`가 npm에서 바로 받아 실행하므로 따로 설치할 필요가 없습니다.
 
 **Claude Code**
 
 ```bash
-claude mcp add trendmcp -- node /absolute/path/to/trendmcp/dist/index.js
+claude mcp add trendmcp -- npx -y trendmcp
 ```
 
 **Claude Desktop / 기타 MCP 클라이언트** (`claude_desktop_config.json` 등)
@@ -37,11 +32,19 @@ claude mcp add trendmcp -- node /absolute/path/to/trendmcp/dist/index.js
 {
   "mcpServers": {
     "trendmcp": {
-      "command": "node",
-      "args": ["/absolute/path/to/trendmcp/dist/index.js"]
+      "command": "npx",
+      "args": ["-y", "trendmcp"]
     }
   }
 }
+```
+
+## 개발
+
+```bash
+npm install
+npm run build
+claude mcp add trendmcp -- node /absolute/path/to/trendmcp/dist/index.js
 ```
 
 ## 참고

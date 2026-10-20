@@ -6,14 +6,23 @@
   "scripts": {
     "build": "tsc",
     "start": "node dist/index.js",
-    "dev": "tsc && node dist/index.js"
+    "dev": "tsc && node dist/index.js",
+    "prepublishOnly": "npm run build"
   },
   "repository": {
     "type": "git",
     "url": "git+https://github.com/jihoo12/trendmcp.git"
   },
-  "keywords": [],
-  "author": "",
+  "keywords": [
+    "mcp",
+    "model-context-protocol",
+    "hackernews",
+    "arxiv",
+    "github-trending",
+    "ai",
+    "llm"
+  ],
+  "author": "jihoo",
   "license": "Apache-2.0",
   "type": "module",
   "bugs": {
@@ -34,6 +43,9 @@
     "trendmcp": "dist/index.js"
   },
   "engines": {
-    "node": ">=18"
-  }
+    "node": ">=20.18.1"
+  },
+  "files": [
+    "dist"
+  ]
 }

@@ -16,19 +16,14 @@ No API keys required, and every tool returns token-efficient Markdown.
 | `github_trending` | GitHub Trending (by language, daily / weekly / monthly) |
 | `tech_trends_digest` | A one-shot digest of today's trends across all three sources |
 
-## Install
+## Usage
 
-```bash
-npm install
-npm run build
-```
-
-## Connect
+Requires Node.js 20.18.1 or later. No install step needed — `npx` fetches it from npm.
 
 **Claude Code**
 
 ```bash
-claude mcp add trendmcp -- node /absolute/path/to/trendmcp/dist/index.js
+claude mcp add trendmcp -- npx -y trendmcp
 ```
 
 **Claude Desktop / other MCP clients** (`claude_desktop_config.json`, etc.)
@@ -37,11 +32,19 @@ claude mcp add trendmcp -- node /absolute/path/to/trendmcp/dist/index.js
 {
   "mcpServers": {
     "trendmcp": {
-      "command": "node",
-      "args": ["/absolute/path/to/trendmcp/dist/index.js"]
+      "command": "npx",
+      "args": ["-y", "trendmcp"]
     }
   }
 }
+```
+
+## Development
+
+```bash
+npm install
+npm run build
+claude mcp add trendmcp -- node /absolute/path/to/trendmcp/dist/index.js
 ```
 
 ## Notes
