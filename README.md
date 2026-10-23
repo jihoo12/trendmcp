@@ -26,6 +26,25 @@ Requires Node.js 20.18.1 or later. No install step needed — `npx` fetches it f
 claude mcp add trendmcp -- npx -y trendmcp
 ```
 
+**Codex CLI / IDE extension**
+
+With the Codex CLI installed, register the server:
+
+```bash
+codex mcp add trendmcp -- npx -y trendmcp
+```
+
+Alternatively, add the following to `~/.codex/config.toml`:
+
+```toml
+[mcp_servers.trendmcp]
+command = "npx"
+args = ["-y", "trendmcp"]
+```
+
+The CLI and IDE extension share this configuration. Run `codex mcp list` to verify registration, or use `/mcp` inside Codex to check active servers.
+See the [official Codex MCP documentation](https://developers.openai.com/codex/mcp) for details.
+
 **Claude Desktop / other MCP clients** (`claude_desktop_config.json`, etc.)
 
 ```json

@@ -26,6 +26,25 @@ Node.js 20.18.1 이상이 필요합니다. `npx`가 npm에서 바로 받아 실�
 claude mcp add trendmcp -- npx -y trendmcp
 ```
 
+**Codex CLI / IDE 확장**
+
+Codex CLI가 설치된 상태에서 다음 명령으로 서버를 등록합니다.
+
+```bash
+codex mcp add trendmcp -- npx -y trendmcp
+```
+
+또는 `~/.codex/config.toml`에 다음 설정을 추가합니다.
+
+```toml
+[mcp_servers.trendmcp]
+command = "npx"
+args = ["-y", "trendmcp"]
+```
+
+CLI와 IDE 확장은 이 설정을 공유합니다. `codex mcp list`로 등록 여부를 확인하거나, Codex 안에서 `/mcp`로 활성 서버를 확인할 수 있습니다.
+자세한 내용은 [공식 Codex MCP 문서](https://developers.openai.com/codex/mcp)를 참고하세요.
+
 **Claude Desktop / 기타 MCP 클라이언트** (`claude_desktop_config.json` 등)
 
 ```json
